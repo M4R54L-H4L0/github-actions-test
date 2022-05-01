@@ -8,6 +8,12 @@ jobs:
         run: |
           pwd
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          # git clone git@github:M4R54L:$GITHUB_REPOSITORY
+          # git checkout $GITHUB_SHA
       - name: Checkout
         uses: actions/checkout@v3.0.2
       - name: List files after checkout
