@@ -16,6 +16,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Print repository dispatch payload
+        run: echo ${{ github.event.client_payload.env }}
       - name: List files
         run: |
           pwd
