@@ -6,7 +6,7 @@ on:
       - closed
       - assigned
       - opened
-      - closed
+      - reopened
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
