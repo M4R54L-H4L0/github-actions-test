@@ -22,7 +22,7 @@ if [[ "" == "${HEROKU_APP}" ]]; then
 fi
 
 # git push "https://heroku:${HEROKU_API_KEY}@git.heroku.com/${HEROKU_APP}.git" HEAD:master -f
-echo "https://heroku:${HEROKU_API_KEY}@git.heroku.com/${HEROKU_APP}.git"
+echo "git push https://heroku:${HEROKU_API_KEY}@git.heroku.com/${HEROKU_APP}.git  HEAD:master -f"
 
 # echo "Heroku app" ${HEROKU_APP}
 # echo ${HEROKU_APP_LIST} | sed 's/./& /g'
