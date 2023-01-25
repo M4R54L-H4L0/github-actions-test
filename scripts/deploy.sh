@@ -25,8 +25,8 @@ readarray -d , -t DEPLOYMENT_APPS<<< ${HEROKU_APP_LIST}
 # fi
 
 # echo "Heroku app" ${HEROKU_APP}
-echo "Heroku deployment apps" ${DEPLOYMENT_APPS} 
-echo "Heroku api key" ${HEROKU_API_KEY}
 echo "Environment" ${ENVIRONMENT} 
+echo "Heroku deployment apps" ${HEROKU_APP_LIST}
+echo "Heroku api key" ${HEROKU_API_KEY}
 echo "Deployoment apps" ${DEPLOYMENT_APPS}
-echo "Secret from GitHub" ${{secrets.HEROKU_APP_LIST}}
+# echo "Secret from GitHub" ${{secrets.HEROKU_APP_LIST}}
