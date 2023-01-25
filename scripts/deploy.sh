@@ -3,10 +3,10 @@
 echo "INICIO DEL PIPELINE"
 
 ENVIRONMENT=$1
-DEPLOYMENT_APPS=$2
+HEROKU_APP_LIST=$2
 HEROKU_API_KEY=$3
 
-# readarray -d , -t DEPLOYMENT_APPS<<< ${{ secrets.HEROKU_APP_LIST }}
+readarray -d , -t DEPLOYMENT_APPS<<< ${HEROKU_APP_LIST}
 # HEROKU_API_KEY=${{ secrets.HEROKU_API_KEY }}
 
 # echo "Heroku app list" ${{secrets.HEROKU_APP_LIST}}
@@ -28,4 +28,5 @@ HEROKU_API_KEY=$3
 echo "Heroku deployment apps" ${DEPLOYMENT_APPS} 
 echo "Heroku api key" ${HEROKU_API_KEY}
 echo "Environment" ${ENVIRONMENT} 
+echo "Deployoment apps" ${DEPLOYMENT_APPS}
 echo "Secret from GitHub" ${{secrets.HEROKU_APP_LIST}}
