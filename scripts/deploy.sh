@@ -8,7 +8,7 @@ ENVIRONMENT=$3
 
 readarray -d , -t DEPLOYMENT_APPS<<< ${HEROKU_APP_LIST}
 
-echo "HEROKU_APP_LIST" "${{secrets.HEROKU_APP_LIST}}" ${{secrets.HEROKU_APP_LIST}} " FIN"
+echo "HEROKU_APP_LIST" "${{secrets.HEROKU_APP_LIST}}" ${secrets.HEROKU_APP_LIST} " FIN"
 
 if [[ "production" == "${ENVIRONMENT}" ]]; then
   HEROKU_APP=$(echo "${DEPLOYMENT_APPS[0]}" | tr --delete '\n')
