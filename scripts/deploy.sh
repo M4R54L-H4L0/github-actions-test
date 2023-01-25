@@ -5,10 +5,9 @@ echo "INICIO DEL PIPELINE"
 ENVIRONMENT=$1
 DEPLOYMENT_APPS=$2
 # readarray -d , -t DEPLOYMENT_APPS<<< ${{ secrets.HEROKU_APP_LIST }}
-# HEROKU_API_KEY=${{ secrets.HEROKU_API_KEY }}
+HEROKU_API_KEY=${{ secrets.HEROKU_API_KEY }}
 
 # echo "Heroku app list" ${{secrets.HEROKU_APP_LIST}}
-echo "Heroku deployment apps" ${DEPLOYMENT_APPS}
 
 # if [[ "production" == "${ENVIRONMENT}" ]]; then
 #   HEROKU_APP=$(echo "${DEPLOYMENT_APPS[0]}" | tr --delete '\n')
@@ -24,5 +23,7 @@ echo "Heroku deployment apps" ${DEPLOYMENT_APPS}
 # fi
 
 # echo "Heroku app" ${HEROKU_APP}
-# echo "Heroku api key" ${HEROKU_API_KEY}
+echo "Heroku deployment apps" ${DEPLOYMENT_APPS}
+echo "Heroku api key" ${HEROKU_API_KEY}
+echo "Environment" ${ENVIRONMENT}
 # echo "Start the deployment"
