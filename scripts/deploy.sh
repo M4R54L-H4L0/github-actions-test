@@ -24,7 +24,7 @@ HEROKU_API_KEY=$3
 # fi
 
 # echo "Heroku app" ${HEROKU_APP}
-echo "Heroku deployment apps" ${DEPLOYMENT_APPS} | sed 's/./& /g'
-echo "Heroku api key" ${HEROKU_API_KEY} | sed 's/./& /g'
-echo "Environment" ${ENVIRONMENT} | sed 's/./& /g'
+echo "Heroku deployment apps" ${DEPLOYMENT_APPS} 
+echo "Heroku api key" ${HEROKU_API_KEY}
+echo "Environment" ${ENVIRONMENT} 
 # echo "Start the deployment"
