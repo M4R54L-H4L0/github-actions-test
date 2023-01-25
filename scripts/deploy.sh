@@ -3,8 +3,8 @@
 echo "INICIO DEL PIPELINE"
 
 ENVIRONMENT=$1
-readarray -d , -t DEPLOYMENT_APPS<<< ${{secrets.HEROKU_APP_LIST}}
-HEROKU_API_KEY=${{secrets.HEROKU_API_KEY}}
+readarray -d , -t DEPLOYMENT_APPS<<< ${secrets.HEROKU_APP_LIST}
+HEROKU_API_KEY=${secrets.HEROKU_API_KEY}
 
 echo "Heroku app list" ${{secrets.HEROKU_APP_LIST}}
 echo "Heroku deployment apps" ${DEPLOYMENT_APPS}
